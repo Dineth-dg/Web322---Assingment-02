@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= project.title %></title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <%- include('partials/navbar', {page: ''}) %>
+
+  <div class="container mx-auto p-4">
+    <div class="hero bg-base-200 rounded-lg p-8 mb-4">
+      <h1 class="text-3xl font-bold"><%= project.title %></h1>
+      <p class="mt-8">Below, you will find detailed information about this project.</p>
+    </div>
+
+    <img src="<%= project.feature_img_url %>" alt="<%= project.title %>" class="mb-4">
+
+    <p class="mb-2"><strong>Intro:</strong> <%= project.intro_short %></p>
+    <p class="mb-2"><strong>Impact:</strong> <%= project.impact %></p>
+    <a href="<%= project.original_source_url %>" class="btn btn-primary mb-4">More Info</a>
+
+    <div id="quote" class="mt-4 italic"></div>
+
+    <a href="#" onclick="history.back(); return false;" class="btn mt-4">Back</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const response = await fetch('https://dummyjson.com/quotes/random');
+        const data = await response.json();
+        document.getElementById('quote').innerText = `"${data.quote}" — ${data.author}`;
+      } catch (err) {
+        document.getElementById('quote').innerText = 'Quote unavailable';
+      }
+    });
+  </script>
+</body>
+</html>

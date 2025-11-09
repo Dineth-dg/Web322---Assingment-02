@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  
+  <%- include('partials/navbar', {page: '/about'}) %>
+
+  <div class="container mx-auto ">
+    
+    <div class="hero bg-base-200 rounded-lg p-8 mb-8 ">
+      <h1 class="text-3xl font-bold mb-8">About Me</h1>
+      <p class="mt-8 ">All about me, my background, hobbies, and courses I'm taking.</p>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <div class="flex justify-center">
+        <img src="/images/me.jpg" alt="Me" class="rounded-lg shadow-lg max-w-full h-auto" height="300px" width="300px">
+      </div>
+
+      
+      <div class="flex flex-col justify-center">
+        <p>Hy! My name is Ileperuma Achchige Dineth Damishka Gunarathna. I am currently studying WEB322 at Seneca College.</p>
+        <p>One of my hobbies is playing guitar.</p>
+        <p>In this assignment, I am building a dynamic website that showcases climate projects and demonstrates<br> my understanding of Node.js, Express, EJS, Tailwind CSS, and DaisyUI.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Climate Solutions</title>
+  <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+  <%- include('partials/navbar', {page: '/'}) %>
+
+
+   
+
+<main class="container mx-auto p-6">
+  <div class="hero min-h-[40vh] bg-base-200 rounded-lg p-8 mb-6">
+    <div class="hero-content text-center">
+      <div class="max-w-2xl">
+        <h1 class="text-3xl font-bold mb-10">Welcome to Climate Solutions</h1>
+
+        <a href="/solutions/projects" class="btn btn-primary btn-lg">
+          View Projects
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+      <!-- Hard-coded example cards -->
+      <div class="card bg-base-100 shadow-lg">
+        <figure><img src="/images/project01.jpg" alt="Project 1" height="200px" width="200px"> </figure>
+        <div class="card-body">
+          <h2 class="card-title">Abandoned Farmland Restoration</h2>
+          
+          <p>Around the world, many farmers are abandoning previously cultivated or grazed lands due to factors such as damaging agricultural practices, desertification, and economic challenges, which threaten food security and contribute to greenhouse gas emissions.</p>
+          <a href="/solutions/projects/1" class="btn btn-sm ">Details</a>
+          
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-lg">
+        <figure><img src="/images/project02.jpg" alt="Project 2"  height="200px" width="200px" ></figure>
+        <div class="card-body">
+          <h2 class="card-title">Alternative Cement</h2>
+          
+          <p>Cement production is a major contributor to greenhouse gas emissions, with portland cement being the most common form.</p>
+          <a href="/solutions/projects/2" class="btn btn-sm">Details</a>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-lg">
+        <figure><img src="/images/project03.png" alt="Project 3"  height="300px" width="220px"></figure>
+        <div class="card-body">
+          <h2 class="card-title">Bicycle Infrastructure</h2>
+          
+          <p>Project Drawdown's bicycle infrastructure solution involves building bike lanes to encourage cycling and reduce reliance on motorized road vehicles, thereby lowering the need for more car infrastructure.</p>
+          <a href="/solutions/projects/3" class="btn btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
