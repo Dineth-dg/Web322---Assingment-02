@@ -8,7 +8,7 @@
 *  
 *  Name: Ileperuma Achchige Dineth Damishka Gunarathna 
 *  Student ID: 130673247 
-*  Date: 09/30/2025 
+*  Date: 11/09/2025 
 * 
 ********************************************************************************/
 
@@ -19,24 +19,22 @@ const projectData = require('./modules/projects');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Serve static files
 app.use(express.static('public'));
 
-// Set view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// Initialize project data before starting server
+
 projectData.initialize()
   .then(() => {
     console.log('Project data initialized.');
 
-    // Routes
+   
     app.get('/', (req, res) => res.render('home', {page: '/'}));
     app.get('/about', (req, res) => res.render('about', {page: '/about'}));
 
     app.get("/solutions/projects", (req, res) => {
-  // Check if there is a query parameter for sector
+  
   const sector = req.query.sector;
 
   let promise;
@@ -66,7 +64,7 @@ projectData.initialize()
       }
     });
 
-    // 404 handler
+    
     app.use((req, res) => {
       res.status(404).render('404', {message: "Page not found", page: ''});
     });
